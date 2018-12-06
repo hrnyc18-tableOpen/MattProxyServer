@@ -1,45 +1,27 @@
-# Project Name
+# Proxy Server
+This server forwards requests to the individual microservices of the TableOpen application and combines the individual clients into one web page. The application displays restaurant pages that shows restaurant description, reservation times and user reviews.
 
-> This project is a replica of Open Table's restaurant web page.
+## Microservices
 
-## Related Projects
-
-  - https://github.com/hrnyc18-tableOpen/Overview
-  - https://github.com/hrnyc18-tableOpen/Menus
-  - https://github.com/hrnyc18-tableOpen/Reservations
   - https://github.com/hrnyc18-tableOpen/Reviews
-
-## Table of Contents
-
-1. [Usage](#Usage)
-1. [Requirements](#requirements)
-1. [Development](#development)
-
-## Usage
-
-> Note: Nodemon should be installed globally.
-> Open a terminal instance for every service and one for the proxy.
-> Run 'npm install' for every service and the proxy.
-> Run 'npm run build' for every service to create a bundle.js file.
-> Run 'npm start' for every service and the proxy.
-> In a browser navigate to localhost:3000
-
-## Requirements
-
-An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
-
-- Node 6.13.0
-- etc
+  - https://github.com/hrnyc18-tableOpen/Overview
+  - https://github.com/hrnyc18-tableOpen/Reservations-2
+  - https://github.com/hrnyc18-tableOpen/Header
 
 ## Development
 
-### Installing Dependencies
+### Setting up microservices
+Before this proxy server can be run, each microservice above needs to be set up and running. You can follow the instructions at the links above to set these up.
 
+### Launching the application locally
 From within the root directory:
 
 ```sh
-npm install -g webpack
-npm install -g nodemon
+# download dependencies
 npm install
+
+# start server on localhost
+npm start
 ```
 
+Then access the application at: http://localhost:3000/restaurants/#, replacing # with any number from 1 to 100, corresponding to the restaurant ID. For example, restaurant 32 would be http://localhost:3000/restaurants/32.
